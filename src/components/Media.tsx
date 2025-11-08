@@ -65,18 +65,6 @@ export const Media = () => {
             </CardContent>
           </Card>
 
-          {/* Media Partners */}
-          <Card className="border-border bg-background">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4 text-center">
-                Media Coverage
-              </h3>
-              <p className="text-center text-muted-foreground mb-6">
-                Media partners announced soon. Stay tuned for coverage details!
-              </p>
-            </CardContent>
-          </Card>
-
           {/* Volunteer CTA */}
           <Card className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground border-0">
             <CardContent className="p-8 text-center">
