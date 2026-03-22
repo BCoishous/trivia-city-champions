@@ -1,6 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Trophy, Users, Heart, Sparkles } from "lucide-react";
 
+const galleryImages = [
+  { src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop", alt: "Trivia night crowd" },
+  { src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop", alt: "Event venue atmosphere" },
+  { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop", alt: "Team competition" },
+  { src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&h=400&fit=crop", alt: "Community gathering" },
+  { src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=400&fit=crop", alt: "Celebration moment" },
+  { src: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop", alt: "Event highlights" },
+];
+
 export const About = () => {
   const features = [
     {
@@ -59,6 +68,29 @@ export const About = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Photo Gallery */}
+        <div className="mt-16">
+          <h3 className="text-2xl md:text-3xl font-bold text-card-foreground text-center mb-8">
+            Event Gallery
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className="relative overflow-hidden rounded-lg aspect-[3/2] group"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors duration-300" />
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-16 max-w-3xl mx-auto">
